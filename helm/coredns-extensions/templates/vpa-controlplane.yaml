@@ -1,0 +1,29 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: coredns-controlplane
+  namespace: {{ .Release.Namespace }}
+spec:
+  resourcePolicy:
+    containerPolicies:
+    - containerName: coredns
+      {{- with .Values.vpa.controlledResources }}
+      controlledResources: 
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      controlledValues: RequestsAndLimits
+      mode: Auto
+      {{- with .Values.vpa.minAllowed }}
+      minAllowed:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.vpa.maxAllowed -}}
+      maxAllowed:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name:  coredns-controlplane
+  updatePolicy:
+    updateMode: Auto
