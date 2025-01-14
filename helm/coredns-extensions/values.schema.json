@@ -17,6 +17,9 @@
                         "type": "string"
                     }
                 },
+                "enabled": {
+                    "type": "boolean"
+                },
                 "maxAllowed": {
                     "type": "object"
                 },

@@ -10,5 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add VPA for CoreDNS deployments.
+- Add value to enable or disable VPA resources.
 
 [Unreleased]: https://github.com/giantswarm/coredns-extensions-app/tree/main

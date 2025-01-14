@@ -2,6 +2,7 @@ name: coredns-extensions
 serviceType: managed
 
 vpa:
+  enabled: true
   controlledResources:
   - memory
   minAllowed:
