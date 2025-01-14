@@ -40,6 +40,20 @@ Here is an example that would install the app to workload cluster `abc12`:
 ```yaml
 # appCR.yaml
 
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  labels:
+    giantswarm.io/cluster: <cluster_id>
+  name: <cluster_id>-coredns-extensions
+  namespace: <org_namespace>
+spec:
+  catalog: giantswarm-playground
+  kubeConfig:
+    inCluster: false
+  name: coredns-extensions
+  namespace: kube-system
+  version: "0.1.0"
 ```
 
 ```yaml
