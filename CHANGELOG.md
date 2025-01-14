@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
+### Added
+
+- Add VPA for CoreDNS deployments.
 
 [Unreleased]: https://github.com/giantswarm/coredns-extensions-app/tree/main
