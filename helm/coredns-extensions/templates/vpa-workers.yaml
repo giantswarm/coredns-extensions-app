@@ -1,3 +1,4 @@
+{{- if .Values.vpa.enabled }}
 apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
 metadata:
@@ -29,3 +30,4 @@ spec:
     name:  coredns-workers
   updatePolicy:
     updateMode: Auto
+{{- end }}
