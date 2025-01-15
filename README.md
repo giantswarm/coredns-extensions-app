@@ -1,7 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/coredns-extensions-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/coredns-extensions-app/tree/main)
 
-[Read me after cloning this template (GS staff only)](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
-
 # coredns-extensions chart
 
 Giant Swarm offers a coredns-extensions App which can be installed in workload clusters.
@@ -9,9 +7,7 @@ Here, we define the coredns-extensions chart with its templates and default conf
 
 **What is this app?**
 
-**Why did we add it?**
-
-**Who can use it?**
+The app provides complementary resources to the [coredns-app](https://github.com/giantswarm/coredns-app) such as VerticalPodAutoscaler CR.
 
 ## Installing
 
@@ -29,11 +25,16 @@ There are several ways to install this app onto a workload cluster.
 ```yaml
 # values.yaml
 
+vpa:
+  maxAllowed:
+    Cpu: 2
+    Memory: 1Gb
+
 ```
 
-### Sample App CR and ConfigMap for the management cluster
+### Sample App CR for the management cluster
 
-If you have access to the Kubernetes API on the management cluster, you could create the App CR and ConfigMap directly.
+If you have access to the Kubernetes API on the management cluster, you could create the App CR directly.
 
 Here is an example that would install the app to workload cluster `abc12`:
 
@@ -56,26 +57,18 @@ spec:
   version: "0.1.0"
 ```
 
-```yaml
-# user-values-configmap.yaml
-
-```
-
 See our [full reference on how to configure apps](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/app-configuration/) for more details.
-
-## Compatibility
-
-This app has been tested to work with the following workload cluster release versions:
-
-- _add release version_
 
 ## Limitations
 
-Some apps have restrictions on how they can be deployed.
-Not following these limitations will most likely result in a broken deployment.
+This app requires disabling the HorizontalPodAutoscaler memory target of CoreDNS. Add this block to your cluster userconfig before installing it:
 
-- _add limitation_
+```yaml
+    global:
+      apps:
+        coreDns:
+          values:
+            hpa:
+              targetMemoryUtilizationPercentage: 0
+```
 
-## Credit
-
-- {APP HELM REPOSITORY}
