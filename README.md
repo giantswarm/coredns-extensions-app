@@ -7,7 +7,7 @@ Here, we define the coredns-extensions chart with its templates and default conf
 
 **What is this app?**
 
-The app provides complementary resources to the coredns-app such as VerticalPodAutoscaler CR.
+The app provides complementary resources to the [coredns-app](https://github.com/giantswarm/coredns-app) such as VerticalPodAutoscaler CR.
 
 ## Installing
 
