@@ -1,13 +1,11 @@
 apiVersion: v2
 appVersion: 0.0.1
-
 name: coredns-extensions
 description: Extra resources for CoreDNS
 home: https://github.com/giantswarm/coredns-extensions-app
 icon: https://s.giantswarm.io/app-icons/coredns/1/dark.svg
-
 sources:
-- https://github.com/giantswarm/coredns-extensions-app
-version: 0.0.0-dev
+  - https://github.com/giantswarm/coredns-extensions-app
+version: 0.1.0
 annotations:
   application.giantswarm.io/team: cabbage
