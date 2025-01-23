@@ -6,6 +6,6 @@ home: https://github.com/giantswarm/coredns-extensions-app
 icon: https://s.giantswarm.io/app-icons/coredns/1/dark.svg
 sources:
   - https://github.com/giantswarm/coredns-extensions-app
-version: 0.1.0
+version: 0.1.1
 annotations:
   application.giantswarm.io/team: cabbage
