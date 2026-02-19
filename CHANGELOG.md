@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2026-02-19
 
+# Changed
+
+- Migrate chart metadata annotations (#45)
+
 ## [0.1.2] - 2025-01-29
 
 ### Changed
