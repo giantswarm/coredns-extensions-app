@@ -21,15 +21,17 @@
                     "type": "boolean"
                 },
                 "maxAllowed": {
-                    "type": "object"
+                    "type": "object",
+                    "additionalProperties": true
                 },
                 "minAllowed": {
                     "type": "object",
+                    "additionalProperties": true,
                     "properties": {
-                        "Cpu": {
+                        "cpu": {
                             "type": "string"
                         },
-                        "Memory": {
+                        "memory": {
                             "type": "string"
                         }
                     }

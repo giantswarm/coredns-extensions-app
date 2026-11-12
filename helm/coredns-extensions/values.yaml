@@ -5,7 +5,7 @@ vpa:
   enabled: true
   controlledResources:
   - memory
-  minAllowed:
-    Cpu: 50m
-    Memory: 150Mi
-  maxAllowed: {}
+  minAllowed:  # @schema additionalProperties: true
+    cpu: 50m
+    memory: 150Mi
+  maxAllowed: {}  # @schema additionalProperties: true
