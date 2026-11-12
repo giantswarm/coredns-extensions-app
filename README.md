@@ -71,4 +71,3 @@ This app requires disabling the HorizontalPodAutoscaler memory target of CoreDNS
             hpa:
               targetMemoryUtilizationPercentage: 0
 ```
-
