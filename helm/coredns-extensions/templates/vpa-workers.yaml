@@ -20,7 +20,7 @@ spec:
       minAllowed:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.vpa.maxAllowed -}}
+      {{- with .Values.vpa.maxAllowed }}
       maxAllowed:
         {{- toYaml . | nindent 8 }}
       {{- end }}

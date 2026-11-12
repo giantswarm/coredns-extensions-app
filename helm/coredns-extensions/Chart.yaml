@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 0.0.1
+appVersion: 0.1.3
 name: coredns-extensions
 description: Extra resources for CoreDNS
 home: https://github.com/giantswarm/coredns-extensions-app
