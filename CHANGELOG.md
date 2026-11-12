@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Keep the `giantswarm-catalog` publish in `.circleci/custom.yml` for devctl-generated CI.
+- Align the chart `appVersion` with the chart version.
 
 ### Fixed
 
