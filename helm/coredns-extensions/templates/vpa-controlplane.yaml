@@ -11,7 +11,7 @@ spec:
     containerPolicies:
     - containerName: coredns
       {{- with .Values.vpa.controlledResources }}
-      controlledResources: 
+      controlledResources:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       controlledValues: RequestsAndLimits
